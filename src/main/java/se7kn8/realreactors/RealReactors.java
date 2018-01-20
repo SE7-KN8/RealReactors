@@ -1,0 +1,45 @@
+package se7kn8.realreactors;
+
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import se7kn8.realreactors.common.proxy.CommonProxy;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+@Mod(modid = RealReactors.MOD_ID, useMetadata = true)
+@SuppressWarnings("unused") // Loaded by fml
+public class RealReactors {
+
+	public static final String MOD_ID = "realreactors";
+	public static Logger log;
+
+	@SidedProxy(serverSide = "se7kn8.realreactors.common.proxy.CommonProxy", clientSide = "se7kn8.realreactors.client.proxy.ClientProxy")
+	public static CommonProxy proxy;
+
+	@Mod.Instance(RealReactors.MOD_ID)
+	public static RealReactors instance;
+
+	@Mod.EventHandler
+	public void preInit(FMLPreInitializationEvent event){
+		log = event.getModLog();
+		log.info("PreInit");
+		proxy.preInit(event);
+	}
+
+	@Mod.EventHandler
+	public void init(FMLInitializationEvent event){
+		log.info("Init");
+		proxy.init(event);
+	}
+
+	@Mod.EventHandler
+	public void postInit(FMLPostInitializationEvent event){
+		log.info("PostInit");
+		proxy.postInit(event);
+	}
+
+}

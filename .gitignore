@@ -1,0 +1,25 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+classes
+.gradle
+
+# other
+eclipse
+run
+/forge-1.12.2-14.23.1.2599-changelog.txt
+/README.txt

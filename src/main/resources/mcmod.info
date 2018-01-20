@@ -1,0 +1,16 @@
+[
+{
+  "modid": "realreactors",
+  "name": "RealReactors",
+  "description": "A mod about nuclear reactors",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SE7-KN8"],
+  "credits": "Forge and some others.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
