@@ -1,5 +1,8 @@
 package se7kn8.realreactors;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -7,12 +10,18 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import se7kn8.realreactors.common.proxy.CommonProxy;
 
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = RealReactors.MOD_ID, useMetadata = true)
 @SuppressWarnings("unused") // Loaded by fml
 public class RealReactors {
+
+	public static final CreativeTabs creativeTab = new CreativeTabs(RealReactors.MOD_ID) {
+		@Override
+		public ItemStack getTabIconItem() {
+			return new ItemStack(Blocks.COMMAND_BLOCK); //TODO new icon
+		}
+	};
 
 	public static final String MOD_ID = "realreactors";
 	public static Logger log;

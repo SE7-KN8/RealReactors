@@ -1,0 +1,9 @@
+# Ingot Items
+item.ingot_boron.name=Bor
+item.ingot_boron_steel.name=Borstahl
+item.ingot_chromium.name=Chrom
+item.ingot_chromium_steel.name=Chromstahl
+item.ingot_graphite.name=Graphit
+item.ingot_potassium.name=Kalium
+item.ingot_sodium.name=Natrium
+item.ingot_steel.name=Stahl
