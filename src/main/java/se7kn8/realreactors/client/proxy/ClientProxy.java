@@ -1,8 +1,10 @@
 package se7kn8.realreactors.client.proxy;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -49,5 +51,10 @@ public class ClientProxy extends CommonProxy {
 		}
 
 		ModelBakery.registerItemVariants(item, resourceLocations);
+	}
+
+	@Override
+	public void spawnParticle(EnumParticleTypes particleType, double x, double y, double z, double motX, double motY, double motZ) {
+		Minecraft.getMinecraft().world.spawnParticle(particleType, x, y, z, motX, motY, motZ);
 	}
 }
