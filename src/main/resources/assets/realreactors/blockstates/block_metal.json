@@ -1,0 +1,28 @@
+{
+  "variants":{
+    "type=boron":{
+      "model": "realreactors:metal/boron"
+    },
+    "type=boron_steel":{
+      "model": "realreactors:metal/boron_steel"
+    },
+    "type=chromium":{
+      "model": "realreactors:metal/chromium"
+    },
+    "type=chromium_steel":{
+      "model": "realreactors:metal/chromium_steel"
+    },
+    "type=graphite":{
+      "model": "realreactors:metal/graphite"
+    },
+    "type=potassium":{
+      "model": "realreactors:metal/potassium"
+    },
+    "type=sodium":{
+      "model": "realreactors:metal/sodium"
+    },
+    "type=steel":{
+      "model": "realreactors:metal/steel"
+    }
+  }
+}

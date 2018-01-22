@@ -7,3 +7,13 @@ item.ingot_graphite.name=Graphite
 item.ingot_potassium.name=Potassium
 item.ingot_sodium.name=Sodium
 item.ingot_steel.name=Steel
+
+# Metal Blocks
+item.block_boron.name=Boron block
+item.block_boron_steel.name=Boron steel block
+item.block_chromium.name=Chromium block
+item.block_chromium_steel.name=Chromium steel block
+item.block_graphite.name=Graphite block
+item.block_potassium.name=Potassium block
+item.block_sodium.name=Sodium block
+item.block_steel.name=Steel block
