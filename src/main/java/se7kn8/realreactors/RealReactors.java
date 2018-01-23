@@ -3,6 +3,7 @@ package se7kn8.realreactors;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -15,6 +16,8 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = RealReactors.MOD_ID, useMetadata = true)
 @SuppressWarnings("unused") // Loaded by fml
 public class RealReactors {
+
+	public static final int ENTITY_ID_ALKALI_METAL = 10;
 
 	public static final CreativeTabs creativeTab = new CreativeTabs(RealReactors.MOD_ID) {
 		@Override
@@ -33,22 +36,30 @@ public class RealReactors {
 	public static RealReactors instance;
 
 	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event){
+	public void preInit(FMLPreInitializationEvent event) {
 		log = event.getModLog();
 		log.info("PreInit");
 		proxy.preInit(event);
 	}
 
 	@Mod.EventHandler
-	public void init(FMLInitializationEvent event){
+	public void init(FMLInitializationEvent event) {
 		log.info("Init");
 		proxy.init(event);
 	}
 
 	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event){
+	public void postInit(FMLPostInitializationEvent event) {
 		log.info("PostInit");
 		proxy.postInit(event);
+	}
+
+	public static boolean isEffectiveClient() {
+		return FMLCommonHandler.instance().getEffectiveSide().isClient();
+	}
+
+	public static boolean isEffectiveServer() {
+		return FMLCommonHandler.instance().getEffectiveSide().isServer();
 	}
 
 }
