@@ -22,6 +22,8 @@ public class CommonProxy {
 
 	public void init(FMLInitializationEvent event){
 		RealReactors.log.info("CommonInit");
+		RealReactorsItems.registerOreDict();
+		RealReactorsBlocks.registerOreDict();
 	}
 
 	public void postInit(FMLPostInitializationEvent event){
