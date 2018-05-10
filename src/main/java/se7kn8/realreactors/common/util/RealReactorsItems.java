@@ -2,7 +2,6 @@ package se7kn8.realreactors.common.util;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 import se7kn8.realreactors.RealReactors;
@@ -18,7 +17,7 @@ public class RealReactorsItems {
 
 	public static void registerOreDict() {
 		for (int i = 0; i < ItemIngot.SUBTYPES.length; i++) {
-			OreDictionary.registerOre("ingot" + StringHelper.capitalizeFirstLetter(ItemIngot.SUBTYPES[i]), new ItemStack(itemIngot, 1, i));
+			OreDictionary.registerOre("ingot" + StringHelper.makeOreDictString(ItemIngot.SUBTYPES[i]), new ItemStack(itemIngot, 1, i));
 		}
 	}
 

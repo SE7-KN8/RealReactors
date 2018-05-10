@@ -1,0 +1,46 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGraphite"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGraphite"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGraphite"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGraphite"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGraphite"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGraphite"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGraphite"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGraphite"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGraphite"
+    }
+  ],
+  "result": {
+    "item": "realreactors:block_metal",
+    "data": 4,
+    "count": 1
+  }
+}

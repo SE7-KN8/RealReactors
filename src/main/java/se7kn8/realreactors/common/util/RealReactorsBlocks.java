@@ -19,7 +19,7 @@ public class RealReactorsBlocks {
 
 	public static void registerOreDict() {
 		for (int i = 0; i < blockMetal.enumValues.length; i++) {
-			OreDictionary.registerOre("block" + StringHelper.capitalizeFirstLetter(blockMetal.enumValues[i].toString()), new ItemStack(Item.getItemFromBlock(blockMetal), 1, i));
+			OreDictionary.registerOre("block" + StringHelper.makeOreDictString(blockMetal.enumValues[i].toString()), new ItemStack(Item.getItemFromBlock(blockMetal), 1, i));
 		}
 	}
 

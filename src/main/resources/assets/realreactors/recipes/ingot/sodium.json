@@ -1,0 +1,14 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "blockSodium"
+    }
+  ],
+  "result": {
+    "item": "realreactors:ingot",
+    "data": 6,
+    "count": 9
+  }
+}

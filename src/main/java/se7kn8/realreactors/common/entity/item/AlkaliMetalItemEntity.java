@@ -70,10 +70,6 @@ public class AlkaliMetalItemEntity extends EntityItem {
 		boolean isInWater = this.world.getBlockState(getPosition()).getBlock() == Blocks.WATER;
 
 		if (RealReactors.isEffectiveServer()) {
-			System.out.println("water: " + waterReactionTime);
-			System.out.println("air: " + airReactionTime);
-			System.out.println("age: " + getAge());
-
 			if (isInWater) {
 				if (getAge() > waterReactionTime) {
 					world.setBlockState(getPosition(), Blocks.AIR.getDefaultState());

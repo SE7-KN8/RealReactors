@@ -1,0 +1,14 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "blockBoronSteel"
+    }
+  ],
+  "result": {
+    "item": "realreactors:ingot",
+    "data": 1,
+    "count": 9
+  }
+}

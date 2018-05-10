@@ -1,0 +1,46 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotBoronSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotBoronSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotBoronSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotBoronSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotBoronSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotBoronSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotBoronSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotBoronSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotBoronSteel"
+    }
+  ],
+  "result": {
+    "item": "realreactors:block_metal",
+    "data": 1,
+    "count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "blockGraphite"
+    }
+  ],
+  "result": {
+    "item": "realreactors:ingot",
+    "data": 4,
+    "count": 9
+  }
+}

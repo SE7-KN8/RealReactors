@@ -1,0 +1,14 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "blockChromium"
+    }
+  ],
+  "result": {
+    "item": "realreactors:ingot",
+    "data": 2,
+    "count": 9
+  }
+}

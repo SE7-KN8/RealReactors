@@ -1,0 +1,46 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotChromiumSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotChromiumSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotChromiumSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotChromiumSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotChromiumSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotChromiumSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotChromiumSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotChromiumSteel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotChromiumSteel"
+    }
+  ],
+  "result": {
+    "item": "realreactors:block_metal",
+    "data": 3,
+    "count": 1
+  }
+}

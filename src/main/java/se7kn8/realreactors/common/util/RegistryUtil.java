@@ -27,6 +27,4 @@ public class RegistryUtil {
 	public static void registerBlock(RegistryEvent.Register<Block> event){
 		RealReactorsBlocks.registerBlock(event.getRegistry());
 	}
-
-
 }

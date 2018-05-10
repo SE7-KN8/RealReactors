@@ -1,0 +1,46 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotSodium"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotSodium"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotSodium"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotSodium"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotSodium"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotSodium"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotSodium"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotSodium"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotSodium"
+    }
+  ],
+  "result": {
+    "item": "realreactors:block_metal",
+    "data": 6,
+    "count": 1
+  }
+}
