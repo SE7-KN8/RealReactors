@@ -9,9 +9,11 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import se7kn8.realreactors.common.proxy.CommonProxy;
+import se7kn8.realreactors.server.proxy.ServerProxy;
 
 import org.apache.logging.log4j.Logger;
+import se7kn8.realreactors.common.util.RealReactorsBlocks;
+import se7kn8.realreactors.common.util.RealReactorsItems;
 
 @Mod(modid = RealReactors.MOD_ID, useMetadata = true)
 @SuppressWarnings("unused") // Loaded by fml
@@ -29,8 +31,8 @@ public class RealReactors {
 	public static final String MOD_ID = "realreactors";
 	public static Logger log;
 
-	@SidedProxy(serverSide = "se7kn8.realreactors.common.proxy.CommonProxy", clientSide = "se7kn8.realreactors.client.proxy.ClientProxy")
-	public static CommonProxy proxy;
+	@SidedProxy(serverSide = "se7kn8.realreactors.server.proxy.ServerProxy", clientSide = "se7kn8.realreactors.client.proxy.ClientProxy")
+	public static ServerProxy proxy;
 
 	@Mod.Instance(RealReactors.MOD_ID)
 	public static RealReactors instance;
@@ -39,19 +41,18 @@ public class RealReactors {
 	public void preInit(FMLPreInitializationEvent event) {
 		log = event.getModLog();
 		log.info("PreInit");
-		proxy.preInit(event);
 	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		log.info("Init");
-		proxy.init(event);
+		RealReactorsItems.registerOreDict();
+		RealReactorsBlocks.registerOreDict();
 	}
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		log.info("PostInit");
-		proxy.postInit(event);
 	}
 
 	public static boolean isEffectiveClient() {
