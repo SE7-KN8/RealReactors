@@ -17,3 +17,7 @@ item.block_graphite.name=Graphite block
 item.block_potassium.name=Potassium block
 item.block_sodium.name=Sodium block
 item.block_steel.name=Steel block
+
+# Ore Blocks
+item.block_pitchblende.name=Pitchblende ore
+item.block_chromite.name=Chromite ore

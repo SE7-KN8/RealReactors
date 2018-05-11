@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "type=pitchblende":{
+      "model": "realreactors:ore/pitchblende"
+    },
+    "type=chromite":{
+      "model": "realreactors:ore/chromite"
+    }
+  }
+}
