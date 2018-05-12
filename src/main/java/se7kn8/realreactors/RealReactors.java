@@ -9,6 +9,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import se7kn8.realreactors.common.world.gen.OreGenerator;
 import se7kn8.realreactors.server.proxy.ServerProxy;
 
 import org.apache.logging.log4j.Logger;
@@ -48,6 +50,7 @@ public class RealReactors {
 		log.info("Init");
 		RealReactorsItems.registerOreDict();
 		RealReactorsBlocks.registerOreDict();
+		GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
 	}
 
 	@Mod.EventHandler
