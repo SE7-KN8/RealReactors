@@ -6,18 +6,22 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 import se7kn8.realreactors.RealReactors;
+import se7kn8.realreactors.common.block.BlockCrusher;
 import se7kn8.realreactors.common.block.BlockMetal;
 import se7kn8.realreactors.common.block.BlockOre;
+import se7kn8.realreactors.common.block.item.ItemBlockBase;
 import se7kn8.realreactors.common.block.item.ItemBlockMeta;
 
 public class RealReactorsBlocks {
 
 	public static BlockMetal blockMetal;
 	public static BlockOre blockOre;
+	public static BlockCrusher blockCrusher;
 
 	static {
 		blockMetal = new BlockMetal();
 		blockOre = new BlockOre();
+		blockCrusher = new BlockCrusher();
 	}
 
 	public static void registerOreDict() {
@@ -32,21 +36,25 @@ public class RealReactorsBlocks {
 	public static void registerItemBlock(IForgeRegistry<Item> registry) {
 		registry.register(new ItemBlockMeta(blockMetal));
 		registry.register(new ItemBlockMeta(blockOre));
+		registry.register(new ItemBlockBase(blockCrusher));
 	}
 
 	public static void registerBlock(IForgeRegistry<Block> registry) {
 		registry.register(blockMetal);
 		registry.register(blockOre);
+		registry.register(blockCrusher);
 	}
 
 	public static void registerModels() {
 		for (int i = 0; i < blockMetal.enumValues.length; i++) {
-			RealReactors.proxy.registerItemRenderer(Item.getItemFromBlock(blockMetal), i, "block/metal/" + blockMetal.enumValues[i].toString());
+			RealReactors.proxy.registerItemRenderer(Item.getItemFromBlock(blockMetal), i, "block_metal");
 		}
 
 		for (int i = 0; i < blockOre.enumValues.length; i++) {
-			RealReactors.proxy.registerItemRenderer(Item.getItemFromBlock(blockOre), i, "block/ore/" + blockOre.enumValues[i].toString());
+			RealReactors.proxy.registerItemRenderer(Item.getItemFromBlock(blockOre), i, "ore");
 		}
+
+		RealReactors.proxy.registerItemRenderer(Item.getItemFromBlock(blockCrusher), 0, "block/machine/crusher");
 	}
 
 }

@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import se7kn8.realreactors.RealReactors;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = RealReactors.MOD_ID)
 public class RegistryUtil {
 
 	@SubscribeEvent

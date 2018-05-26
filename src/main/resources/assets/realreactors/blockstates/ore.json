@@ -1,10 +1,19 @@
 {
-  "variants":{
-    "type=pitchblende":{
-      "model": "realreactors:ore/pitchblende"
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube_all",
+    "textures": {
+      "all": "realreactors:blocks/ore/pitchblende"
     },
-    "type=chromite":{
-      "model": "realreactors:ore/chromite"
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "inventory,type=pitchblende": [{"textures": {"all": "realreactors:blocks/ore/pitchblende"}}],
+    "inventory,type=chromite": [{"textures": {"all": "realreactors:blocks/ore/chromite"}}],
+    "type":
+    {
+      "pitchblende": {"textures": {"all": "realreactors:blocks/ore/pitchblende"}},
+      "chromite": {"textures": {"all": "realreactors:blocks/ore/chromite"}}
     }
   }
 }

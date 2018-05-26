@@ -22,6 +22,14 @@ public abstract class BlockMeta<T extends Enum<T> & IStringSerializable> extends
 		this.setDefaultState(this.blockState.getBaseState().withProperty(type, value));
 	}
 
+	public IProperty<T> getProperty() {
+		return type;
+	}
+
+	public T[] getEnumValues() {
+		return enumValues;
+	}
+
 	@Override
 	public int damageDropped(IBlockState state) {
 		return state.getValue(type).ordinal();

@@ -1,28 +1,31 @@
 {
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube_all",
+    "textures": {
+      "all": "realreactors:blocks/metal/boron"
+    },
+    "transform": "forge:default-block"
+  },
   "variants":{
-    "type=boron":{
-      "model": "realreactors:metal/boron"
-    },
-    "type=boron_steel":{
-      "model": "realreactors:metal/boron_steel"
-    },
-    "type=chromium":{
-      "model": "realreactors:metal/chromium"
-    },
-    "type=chromium_steel":{
-      "model": "realreactors:metal/chromium_steel"
-    },
-    "type=graphite":{
-      "model": "realreactors:metal/graphite"
-    },
-    "type=potassium":{
-      "model": "realreactors:metal/potassium"
-    },
-    "type=sodium":{
-      "model": "realreactors:metal/sodium"
-    },
-    "type=steel":{
-      "model": "realreactors:metal/steel"
+    "inventory,type=boron":  [{"textures": {"all": "realreactors:blocks/metal/boron"}}],
+    "inventory,type=boron_steel": [{"textures": {"all": "realreactors:blocks/metal/boron_steel"}}],
+    "inventory,type=chromium": [{"textures": {"all": "realreactors:blocks/metal/chromium"}}],
+    "inventory,type=chromium_steel": [{"textures": {"all": "realreactors:blocks/metal/chromium_steel"}}],
+    "inventory,type=graphite": [{"textures": {"all": "realreactors:blocks/metal/graphite"}}],
+    "inventory,type=potassium": [{"textures": {"all": "realreactors:blocks/metal/potassium"}}],
+    "inventory,type=sodium": [{"textures": {"all": "realreactors:blocks/metal/sodium"}}],
+    "inventory,type=steel": [{"textures": {"all": "realreactors:blocks/metal/steel"}}],
+    "type":
+    {
+      "boron": {"textures": {"all": "realreactors:blocks/metal/boron"}},
+      "boron_steel": {"textures": {"all": "realreactors:blocks/metal/boron_steel"}},
+      "chromium": {"textures": {"all": "realreactors:blocks/metal/chromium"}},
+      "chromium_steel": {"textures": {"all": "realreactors:blocks/metal/chromium_steel"}},
+      "graphite": {"textures": {"all": "realreactors:blocks/metal/graphite"}},
+      "potassium": {"textures": {"all": "realreactors:blocks/metal/potassium"}},
+      "sodium": {"textures": {"all": "realreactors:blocks/metal/sodium"}},
+      "steel": {"textures": {"all": "realreactors:blocks/metal/steel"}}
     }
   }
 }

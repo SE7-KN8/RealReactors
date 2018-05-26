@@ -1,19 +1,38 @@
 package se7kn8.realreactors.client.proxy;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import se7kn8.realreactors.RealReactors;
+import se7kn8.realreactors.common.block.item.ItemBlockMeta;
 import se7kn8.realreactors.server.proxy.ServerProxy;
+
+import javax.annotation.Nonnull;
 
 public class ClientProxy extends ServerProxy {
 	@Override
 	public void registerItemRenderer(Item item, int meta, String id) {
-		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(new ResourceLocation(RealReactors.MOD_ID, id), "inventory"));
+		ResourceLocation location = new ResourceLocation(RealReactors.MOD_ID, id);
+		if (item instanceof ItemBlockMeta) {
+			ItemBlockMeta metaItem = (ItemBlockMeta) item;
+			ModelLoader.setCustomMeshDefinition(item, new ItemMeshDefinition() {
+				@Override
+				@Nonnull
+				public ModelResourceLocation getModelLocation(@Nonnull ItemStack stack) {
+					return new ModelResourceLocation(location, "inventory");
+				}
+			});
+			String variant = "inventory," + metaItem.getMetaBlock().type.getName() + "=" + metaItem.getMetaBlock().getEnumValues()[meta].toString().toLowerCase();
+			ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(location, variant));
+		} else {
+			ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(location, "inventory"));
+		}
 	}
 
 	@Override

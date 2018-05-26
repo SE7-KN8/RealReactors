@@ -8,13 +8,13 @@ import se7kn8.realreactors.common.block.BlockMeta;
 
 import javax.annotation.Nonnull;
 
-public class ItemBlockMeta extends ItemBlockBase{
+public class ItemBlockMeta extends ItemBlockBase {
 
 	private BlockMeta metaBlock;
 
 	public ItemBlockMeta(BlockMeta block) {
 		super(block);
-		if(block.enumValues.length > 1){
+		if (block.enumValues.length > 1) {
 			setHasSubtypes(true);
 		}
 		this.metaBlock = block;
@@ -22,7 +22,7 @@ public class ItemBlockMeta extends ItemBlockBase{
 
 	@Override
 	public void getSubItems(@Nonnull CreativeTabs tab, @Nonnull NonNullList<ItemStack> items) {
-		if(tab == CreativeTabs.SEARCH || tab == RealReactors.creativeTab){
+		if (tab == CreativeTabs.SEARCH || tab == RealReactors.creativeTab) {
 			metaBlock.getSubBlocks(tab, items);
 		}
 	}
@@ -36,5 +36,9 @@ public class ItemBlockMeta extends ItemBlockBase{
 	@Override
 	public int getMetadata(int damage) {
 		return damage;
+	}
+
+	public BlockMeta getMetaBlock() {
+		return metaBlock;
 	}
 }
