@@ -1,0 +1,18 @@
+{
+  "parameters": {
+    "world_to_cycle": ["/", "#cycle_length"]
+  },
+  "clips": {
+    "default": "realreactors:block/machine/crusher/crusher_drum@default",
+    "moving": ["apply", "realreactors:block/machine/crusher/crusher_drum@moving", "#world_to_cycle"]
+  },
+  "states": [
+    "default",
+    "moving"
+  ],
+  "transitions": {
+    "default": "moving",
+    "moving": "default"
+  },
+  "start_state": "default"
+}

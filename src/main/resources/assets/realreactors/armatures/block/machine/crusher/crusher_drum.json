@@ -1,0 +1,37 @@
+{
+  "joints": {
+    "drum": {
+      "0": [1.0]
+    }
+  },
+  "clips": {
+    "default": {
+      "loop": false,
+      "joint_clips": {},
+      "events": {}
+    },
+    "moving": {
+      "loop": true,
+      "joint_clips": {
+        "drum": [
+          {
+            "variable": "axis_z",
+            "type": "uniform",
+            "interpolation": "nearest",
+            "samples": [ 1 ]
+          },
+          {
+            "variable": "angle",
+            "type": "uniform",
+            "interpolation": "linear",
+            "samples": [
+              0, 120, 240,
+              0, 120, 240
+            ]
+          }
+        ]
+      },
+      "events": {}
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+	"elements": [
+		{
+			"from": [1, 0, 1],
+			"to": [15, 2, 15],
+			"faces": {
+				"north": {"uv": [0, 0, 14, 2], "texture": "#base"},
+				"east": {"uv": [0, 0, 14, 2], "texture": "#base"},
+				"south": {"uv": [0, 0, 14, 2], "texture": "#base"},
+				"west": {"uv": [0, 0, 14, 2], "texture": "#base"},
+				"up": {"uv": [0, 0, 14, 14], "texture": "#base"},
+				"down": {"uv": [0, 0, 14, 14], "texture": "#base"}
+			}
+		},
+		{
+			"from": [0, 0, 0],
+			"to": [16, 13, 1],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 13], "texture": "#base"},
+				"east": {"uv": [0, 0, 1, 13], "texture": "#base"},
+				"south": {"uv": [0, 0, 16, 13], "texture": "#base"},
+				"west": {"uv": [0, 0, 1, 13], "texture": "#base"},
+				"up": {"uv": [0, 0, 16, 1], "texture": "#base"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#base"}
+			}
+		},
+		{
+			"from": [0, 0, 15],
+			"to": [16, 13, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 13], "texture": "#base"},
+				"east": {"uv": [0, 0, 1, 13], "texture": "#base"},
+				"south": {"uv": [0, 0, 16, 13], "texture": "#base"},
+				"west": {"uv": [0, 0, 1, 13], "texture": "#base"},
+				"up": {"uv": [0, 0, 16, 1], "texture": "#base"},
+				"down": {"uv": [0, 0, 16, 1], "texture": "#base"}
+			}
+		},
+		{
+			"from": [0, 0, 1],
+			"to": [1, 4, 15],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 4], "texture": "#base"},
+				"east": {"uv": [0, 0, 14, 4], "texture": "#base"},
+				"south": {"uv": [0, 0, 1, 4], "texture": "#base"},
+				"west": {"uv": [0, 0, 14, 4], "texture": "#base"},
+				"up": {"uv": [0, 0, 1, 14], "texture": "#base"},
+				"down": {"uv": [0, 0, 1, 14], "texture": "#base"}
+			}
+		},
+		{
+			"from": [15, 0, 1],
+			"to": [16, 4, 15],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 4], "texture": "#base"},
+				"east": {"uv": [0, 0, 14, 4], "texture": "#base"},
+				"south": {"uv": [0, 0, 1, 4], "texture": "#base"},
+				"west": {"uv": [0, 0, 14, 4], "texture": "#base"},
+				"up": {"uv": [0, 0, 1, 14], "texture": "#base"},
+				"down": {"uv": [0, 0, 1, 14], "texture": "#base"}
+			}
+		}
+	]
+}

@@ -1,5 +1,6 @@
 package se7kn8.realreactors.client.proxy;
 
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelBakery;
@@ -9,6 +10,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.model.ModelLoaderRegistry;
+import net.minecraftforge.common.animation.ITimeValue;
+import net.minecraftforge.common.model.animation.IAnimationStateMachine;
 import se7kn8.realreactors.RealReactors;
 import se7kn8.realreactors.common.block.item.ItemBlockMeta;
 import se7kn8.realreactors.server.proxy.ServerProxy;
@@ -50,4 +54,9 @@ public class ClientProxy extends ServerProxy {
 	public void spawnParticle(EnumParticleTypes particleType, double x, double y, double z, double motX, double motY, double motZ) {
 		Minecraft.getMinecraft().world.spawnParticle(particleType, x, y, z, motX, motY, motZ);
 	}
+
+	public IAnimationStateMachine loadASM(ResourceLocation location, ImmutableMap<String, ITimeValue> parameters) {
+		return ModelLoaderRegistry.loadASM(location, parameters);
+	}
+
 }
