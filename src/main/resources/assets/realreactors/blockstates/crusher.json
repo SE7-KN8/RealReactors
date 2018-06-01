@@ -2,8 +2,9 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "base": "blocks/iron_block",
-      "drum": "blocks/dirt"
+      "base": "realreactors:blocks/metal/boron_steel",
+      "drum": "realreactors:blocks/metal/steel",
+      "particle": "realreactors:blocks/metal/boron_steel"
     }
   },
   "variants":{

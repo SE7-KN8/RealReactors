@@ -47,7 +47,6 @@ public class TileEntityCrusher extends TileEntity {
 	}
 
 	public void toggleState() {
-		System.out.println(asm.currentState());
 		if (asm.currentState().equals("default")) {
 			asm.transition("moving");
 		} else if (asm.currentState().equals("moving")) {
