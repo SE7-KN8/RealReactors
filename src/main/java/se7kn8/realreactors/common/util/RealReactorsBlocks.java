@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.animation.AnimationTESR;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
@@ -54,10 +55,10 @@ public class RealReactorsBlocks {
 	}
 
 	public static void registerBlock(IForgeRegistry<Block> registry) {
-		GameRegistry.registerTileEntity(TileEntityCrusher.class, RealReactors.MOD_ID + ":tile_crusher");
 		registry.register(blockMetal);
 		registry.register(blockOre);
 		registry.register(blockCrusher);
+		GameRegistry.registerTileEntity(TileEntityCrusher.class, new ResourceLocation(RealReactors.MOD_ID, "tile_crusher"));
 	}
 
 	public static void registerModels() {

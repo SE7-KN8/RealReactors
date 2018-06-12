@@ -1,5 +1,6 @@
 package se7kn8.realreactors;
 
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -9,7 +10,10 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import se7kn8.realreactors.common.block.tile.TileEntityCrusher;
+import se7kn8.realreactors.common.util.GuiHandler;
 import se7kn8.realreactors.common.world.gen.OreGenerator;
 import se7kn8.realreactors.server.proxy.ServerProxy;
 
@@ -22,6 +26,8 @@ import se7kn8.realreactors.common.util.RealReactorsItems;
 public class RealReactors {
 
 	public static final int ENTITY_ID_ALKALI_METAL = 10;
+
+	public static final int GUI_ID_CRUSHER = 1;
 
 	public static final CreativeTabs creativeTab = new CreativeTabs(RealReactors.MOD_ID) {
 		@Override
@@ -51,6 +57,7 @@ public class RealReactors {
 		RealReactorsItems.registerOreDict();
 		RealReactorsBlocks.registerOreDict();
 		GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
+		NetworkRegistry.INSTANCE.registerGuiHandler(RealReactors.instance, new GuiHandler());
 	}
 
 	@Mod.EventHandler

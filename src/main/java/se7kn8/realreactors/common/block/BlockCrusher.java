@@ -16,6 +16,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.property.ExtendedBlockState;
 import net.minecraftforge.common.property.IUnlistedProperty;
 import net.minecraftforge.common.property.Properties;
+import se7kn8.realreactors.RealReactors;
 import se7kn8.realreactors.common.block.tile.TileEntityCrusher;
 
 import javax.annotation.Nonnull;
@@ -86,6 +87,8 @@ public class BlockCrusher extends BlockBase {
 			if (te instanceof TileEntityCrusher) {
 				((TileEntityCrusher) te).toggleState();
 			}
+		} else {
+			playerIn.openGui(RealReactors.instance, RealReactors.GUI_ID_CRUSHER, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		}
 		return true;
 	}
